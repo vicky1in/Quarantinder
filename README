@@ -1,0 +1,34 @@
+Steps: 
+
+1. Download the MySQL workbench and MYSQL version, most recent versions. (8.0.2.1)
+
+2. Create credentials: 
+    Create username: root
+    Create password: root
+
+3. Login to MySQL and run the following command:
+    create database quarantinderdb;
+
+4. Set up ngrok (only required for video chatting functionalities): 
+    4.1 download at https://ngrok.com/download
+    4.2 follow the instructions on https://ngrok.com/download to connect your account
+    4.3 run ngrok for localhost 8080 using the following command: ./ngrok http 8080
+    4.4 copy the forwarding link shown in your terminal, e.g. https://f9cc4f34dec8.ngrok.io
+    4.5 use this link to create an oauth app on the zoom development site https://marketplace.zoom.us/develop/create
+    4.6 copy the client id and client secrete provided by zoom, along with the ngrok forwarding link the zoom config file located at:
+        .com/groun24/quarantinder/config/ZoomConfigImpl.java
+
+5. Run tests: mvn test
+
+6. Run the program:
+    6.1 run the file: QuarrantineApplication.java
+    6.2 Open browser and go to the ngrok forwarding link from step 4, e.g. https://f9cc4f34dec8.ngrok.io
+        OR: 
+        (without Ngrok and zoom capabilities) Open web browser and go to: http://localhost:8080/
+
+7. Make new account to access the contents within the site or use one of the dummy accounts below: 
+    Usernames: mark, ant, joe, dan, jules, sara, jess, lisa
+    Passwords: same as the username.
+
+8. NOTES:
+    - Please read the wiki for more in-depth instructions on how to use the different functionalities.
